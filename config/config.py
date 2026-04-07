@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, field
 from typing import List, Optional
 
 
@@ -150,7 +150,7 @@ class Config:
     render_test: bool = True
     render_path: bool = False
 
-    systems: System_Config = System_Config()
-    model: Model_Config = Model_Config()
-    data: Data_Config = Data_Config()
-    optim: Optim_Config = Optim_Config()
+    systems: System_Config = field(default_factory=System_Config)
+    model: Model_Config = field(default_factory=Model_Config)
+    data: Data_Config = field(default_factory=Data_Config)
+    optim: Optim_Config = field(default_factory=Optim_Config)
