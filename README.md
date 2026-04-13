@@ -64,7 +64,7 @@ python main.py \
 | Scene | PSNR | SSIM | LPIPS |
 |-------|------|------|-------|
 | Lego (Exp 1) | 25.12 | 0.9391 | 0.0332 |
-| Standup (Exp 1) | TBD | TBD | TBD |
+| Standup (Exp 1) | 34.24 | 0.9835 | 0.0125 |
 | Bouncingballs (Exp 1) | TBD | TBD | TBD |
 | Lego Low Time Grid (Exp 2) | TBD | TBD | TBD |
 
