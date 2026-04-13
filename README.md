@@ -1,4 +1,76 @@
 # HexPlane: A Fast Representation for Dynamic Scenes. (CVPR 2023)
+
+## CS 547 Class Project Fork — SUNY Polytechnic Institute
+This repository is a fork of [HexPlane](https://github.com/Caoang327/HexPlane) created for a CS 547 Final Research Project at SUNY Polytechnic Institute.
+
+### Team Members
+- Goli Likitha Reddy
+- Varsha Reddy Pedditi
+
+### Modifications Made
+- Fixed Python 3.12 compatibility issue in `config/config.py` — replaced mutable dataclass defaults with `field(default_factory=...)` to support newer Python versions
+- Conducted experiments on D-NeRF dataset scenes (lego, standup, bouncingballs)
+- Experiment 2: Modified `time_grid_final` parameter to analyze effect of temporal resolution on reconstruction quality
+
+### Additional Environment Setup
+```bash
+pip install pytorch-msssim
+```
+
+### Running Our Experiments
+
+**Experiment 1 — Replicate Original Results (Lego):**
+```bash
+python main.py \
+  config=config/dnerf_slim.yaml \
+  data.datadir=./data/dnerf/lego \
+  model.time_grid_init=6 \
+  model.time_grid_final=12 \
+  expname=dnerf_slim_lego
+```
+
+**Experiment 1 — Replicate Original Results (Standup):**
+```bash
+python main.py \
+  config=config/dnerf_slim.yaml \
+  data.datadir=./data/dnerf/standup \
+  model.time_grid_init=18 \
+  model.time_grid_final=36 \
+  expname=dnerf_slim_standup
+```
+
+**Experiment 1 — Replicate Original Results (Bouncingballs):**
+```bash
+python main.py \
+  config=config/dnerf_slim.yaml \
+  data.datadir=./data/dnerf/bouncingballs \
+  model.time_grid_init=18 \
+  model.time_grid_final=36 \
+  expname=dnerf_slim_bouncingballs
+```
+
+**Experiment 2 — Reduced Temporal Resolution (Lego):**
+```bash
+python main.py \
+  config=config/dnerf_slim.yaml \
+  data.datadir=./data/dnerf/lego \
+  model.time_grid_init=3 \
+  model.time_grid_final=6 \
+  expname=dnerf_slim_lego_lowtime
+```
+
+### Our Results
+
+| Scene | PSNR | SSIM | LPIPS |
+|-------|------|------|-------|
+| Lego (Exp 1) | 25.12 | 0.9391 | 0.0332 |
+| Standup (Exp 1) | 34.24 | 0.9835 | 0.0125 |
+| Bouncingballs (Exp 1) | TBD | TBD | TBD |
+| Lego Low Time Grid (Exp 2) | TBD | TBD | TBD |
+
+---
+
+# Orginal README
 This is the code for our CVPR 2023 paper :
 [HexPlane: A Fast Representation for Dynamic Scenes](https://caoang327.github.io/HexPlane/)
 
