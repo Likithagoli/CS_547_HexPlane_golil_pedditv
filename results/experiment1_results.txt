@@ -1,0 +1,6 @@
+
+Experiment 1 Results
+====================
+Lego:    PSNR=25.12, SSIM=0.9391, LPIPS=0.0332
+Standup: PSNR=34.24, SSIM=0.9835, LPIPS=0.0125
+Bouncingballs: TBD
