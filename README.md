@@ -7,6 +7,42 @@ This repository is a fork of [HexPlane](https://github.com/Caoang327/HexPlane) c
 - Goli Likitha Reddy
 - Varsha Reddy Pedditi
 
+### Environment Setup
+This project was developed and tested using *Python 3.12* on Google Colab with a Tesla T4 GPU.
+•⁠  ⁠*Clone the repository:*
+  ```bash
+  git clone [https://github.com/Likithagoli/CS_547_HexPlane_golil_pedditv.git](https://github.com/Likithagoli/CS_547_HexPlane_golil_pedditv.git)
+  cd CS_547_HexPlane_golil_pedditv
+
+### Install Dependencies:
+Bash
+pip install -r requirements.txt
+
+### ⁠Dataset Configuration
+
+We utilized the D-NeRF dataset for all experiments. To set up the data:
+
+Create a data directory in the root folder: mkdir data
+
+Download the D-NeRF scenes (e.g., lego, bouncingballs).
+
+Extract the files so the structure matches the config files:
+
+Plaintext
+/content/CS_547_HexPlane_golil_pedditv/data/dnerf/lego/
+/content/CS_547_HexPlane_golil_pedditv/data/dnerf/bouncingballs/
+
+### ⁠Training & Evaluation
+
+To run the Baseline (Lego):
+
+Bash
+python main.py config=config/dnerf_slim.yaml data.datadir=./data/dnerf/lego expname=baseline_lego
+To run the Modified Experiment (Bouncingballs + High Time Grid):
+
+Bash
+python main.py config=config/dnerf_slim.yaml data.datadir=./data/dnerf/bouncingballs model.time_grid_in
+
 ### Modifications Made
 - Fixed Python 3.12 compatibility issue in `config/config.py` — replaced mutable dataclass defaults with `field(default_factory=...)` to support newer Python versions
 - Conducted experiments on D-NeRF dataset scenes (lego, standup, bouncingballs)
@@ -67,6 +103,28 @@ python main.py \
 | Standup (Exp 1) | 34.24 | 0.9835 | 0.0125 |
 | Bouncingballs (Exp 1) | TBD | TBD | TBD |
 | Lego Low Time Grid (Exp 2) | TBD | TBD | TBD |
+
+### Key Technical Modifications
+To successfully run this project in a modern environment, we implemented the following:
+•⁠  ⁠*Python 3.12 Compatibility Fix:* We patched ⁠ config/config.py ⁠ to resolve ⁠ dataclass ⁠ mutable default errors. By utilizing ⁠ field(default_factory=list) ⁠, we stabilized the configuration loading process which previously failed in Python 3.12 environments.
+•⁠  ⁠*Temporal Resolution Enhancement:* In *Experiment 2*, we modified the ⁠ time_grid_final ⁠ parameter from 24 to 48. This allowed the model to capture higher-frequency temporal dynamics, resulting in a PSNR increase from 39.99 to 40.09 on the bouncingballs dataset.
+
+### Final Experiment Summary
+| Experiment | Scene | PSNR | SSIM | LPIPS |
+| :--- | :--- | :--- | :--- | :--- |
+| *Baseline (Reproduction)* | Lego | *25.12* | *0.9387* | 0.0336 |
+| *Baseline (Reproduction)* | Bouncingballs | *39.99* | 0.9801 | 0.0120 |
+| *Modified (High Time Grid)* | Bouncingballs | *40.09* | *0.9812* | 0.0115 |
+
+### Dataset Setup
+To replicate our results, the D-NeRF dataset must be organized as follows.
+
+Download the **lego** and **bouncingballs** scenes from the official D-NeRF repository.
+
+**Directory structure:**
+
+data/dnerf/lego
+data/dnerf/bouncingballs
 
 ---
 
