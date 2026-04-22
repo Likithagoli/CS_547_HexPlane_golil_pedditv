@@ -129,3 +129,14 @@ dmypy.json
 .pyre/
 
 .vscode/
+
+# Datasets
+data/
+dataset/
+
+# Model Checkpoints and Logs
+log/
+logs/
+*.pt
+*.pth
+
