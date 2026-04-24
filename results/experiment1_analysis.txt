@@ -13,5 +13,14 @@ Analysis:
 Scene: Lego
 PSNR: 25.12, SSIM: 0.9391, LPIPS: 0.0332
 
+Analysis:
+•⁠  ⁠Scored lowest PSNR due to complex geometry
+•⁠  ⁠Only 50 training frames vs 150 for other scenes
+
+
 Scene: Standup
 PSNR: 34.24, SSIM: 0.9835, LPIPS: 0.0125
+
+Analysis:
+•⁠  ⁠Medium complexity human motion
+•⁠  ⁠Better than lego due to simpler surface properties
