@@ -1,0 +1,8 @@
+Standup Scene Results - Goli Likitha Reddy
+==========================================
+PSNR:    34.2356
+SSIM:    0.9835
+MS-SSIM: 0.9951
+LPIPS_a: 0.0125
+LPIPS_v: 0.0202
+
