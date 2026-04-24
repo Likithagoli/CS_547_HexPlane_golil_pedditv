@@ -1,0 +1,8 @@
+Lego Scene Results - Goli Likitha Reddy
+========================================
+PSNR:    25.1187
+SSIM:    0.9391
+MS-SSIM: 0.9609
+LPIPS_a: 0.0332
+LPIPS_v: 0.0439
+
