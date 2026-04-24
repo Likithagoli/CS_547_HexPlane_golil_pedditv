@@ -1,0 +1,27 @@
+
+Experiment 1 Analysis - Varsha Reddy Pedditi
+=============================================
+Scene: Bouncingballs
+PSNR: 39.99, SSIM: 0.9919, LPIPS: 0.0072
+
+Analysis:
+• Achieved highest PSNR among all scenes
+• Simple periodic motion is easier for HexPlane to model
+• High SSIM indicates excellent structural similarity
+• Low LPIPS confirms perceptually accurate reconstruction
+
+Scene: Lego
+PSNR: 25.12, SSIM: 0.9391, LPIPS: 0.0332
+
+Analysis:
+•⁠  ⁠Scored lowest PSNR due to complex geometry
+•⁠  ⁠Only 50 training frames vs 150 for other scenes
+
+
+Scene: Standup
+PSNR: 34.24, SSIM: 0.9835, LPIPS: 0.0125
+
+Analysis:
+•⁠  ⁠Medium complexity human motion
+•⁠  ⁠Better than lego due to simpler surface properties
+
