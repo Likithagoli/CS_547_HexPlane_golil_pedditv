@@ -107,7 +107,7 @@ python main.py \
 
 ### Experiment 2 — Modified Temporal Resolution
 
-**Lego — Reduced Time Grid (Goli):**
+**Lego — Reduced Time Grid :**
 ```bash
 python main.py \
   config=config/dnerf_slim.yaml \
@@ -117,7 +117,7 @@ python main.py \
   expname=dnerf_slim_lego_lowtime
 ```
 
-**Bouncingballs — Increased Time Grid (Varsha):**
+**Bouncingballs — Increased Time Grid :**
 ```bash
 python main.py \
   config=config/dnerf_slim.yaml \
