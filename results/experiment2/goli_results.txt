@@ -1,0 +1,14 @@
+Experiment 2 - Lego Low Time Grid - Goli Likitha Reddy
+=====================================================
+Modification: Reduced temporal resolution
+
+Original (Experiment 1):
+time_grid_init=6, time_grid_final=12
+PSNR: 25.12, SSIM: 0.9391, MS-SSIM: 0.9609, LPIPS: 0.0332
+
+Modified (Experiment 2):
+time_grid_init=3, time_grid_final=6
+PSNR: 25.15, SSIM: 0.9417, MS-SSIM: 0.9610, LPIPS: 0.0329
+
+Finding: Reducing time grid has minimal quality impact on lego scene.
+HexPlane is robust to temporal resolution changes for simple scenes.
