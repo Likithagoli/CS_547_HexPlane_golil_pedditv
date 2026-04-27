@@ -1,0 +1,13 @@
+Experiment 2 - Bouncingballs High Time Grid - Varsha Reddy Pedditi
+====================================================================
+Modification: Increased temporal resolution
+
+Original (Experiment 1):
+time_grid_init=18, time_grid_final=36
+PSNR: 39.99, SSIM: 0.9919, LPIPS: 0.0072
+
+Modified (Experiment 2):
+time_grid_init=24, time_grid_final=48
+PSNR: 39.47, SSIM: 0.9905, LPIPS: 0.0103
+
+Finding: Increasing time grid slightly decreases quality - overfitting to temporal noise.
