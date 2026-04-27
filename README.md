@@ -155,6 +155,7 @@ python run_experiments.py
 
 **Finding:** Modifying temporal grid size has minimal impact on reconstruction quality. HexPlane is robust to temporal resolution changes for simple dynamic scenes.
 
+https://colab.research.google.com/drive/1tCbfN8pVV2h_0bFKRrnEAT74aGOhDSiX?usp=sharing
 ---
 
 # Original README
